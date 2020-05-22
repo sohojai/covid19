@@ -1,18 +1,9 @@
 {
   
     
-        "post0": {
-            "title": "বাংলাদেশে করোনা ভাইরাস সংক্রমণের পরিসংখ্যান",
-            "content": "The autoreload extension is already loaded. To reload it, use: %reload_ext autoreload . # MLE to find sigma sigmas = np.linspace(1/20, 1, 20) new, smoothed = prepare_cases(bts, cutoff=25) if len(smoothed) == 0: new, smoothed = prepare_cases(bts, cutoff=10) result = {} # Holds all posteriors with every given value of sigma result[&#39;posteriors&#39;] = [] # Holds the log likelihood across all k for each value of sigma result[&#39;log_likelihoods&#39;] = [] for sigma in sigmas: posteriors, log_likelihood = get_posteriors(smoothed, sigma=sigma) result[&#39;posteriors&#39;].append(posteriors) result[&#39;log_likelihoods&#39;].append(log_likelihood) clear_output(wait=True) sigma = sigmas[np.argmax(result[&#39;log_likelihoods&#39;])] posteriors = result[&#39;posteriors&#39;][np.argmax(result[&#39;log_likelihoods&#39;])] logging.debug(f&quot;Sigma: {sigma} has highest log likelihood&quot;) logging.debug(&#39;Done.&#39;) # Plot it #fig, ax = plt.subplots() #ax.set_title(f&quot;Maximum Likelihood value for $ sigma$&quot;); #ax.plot(sigmas, result[&#39;log_likelihoods&#39;]) #ax.axvline(sigma, color=&#39;k&#39;, linestyle=&quot;:&quot;) .",
-            "url": "https://sohojai.github.io/covid19/2020/05/21/Bangladesh_Covid19_Rt.html",
-            "relUrl": "/2020/05/21/Bangladesh_Covid19_Rt.html",
-            "date": " • May 21, 2020"
-        }
-        
-    
   
     
-        ,"post1": {
+        "post1": {
             "title": "An Example Markdown Post",
             "content": "Example Markdown Post . Basic setup . Jekyll requires blog post files to be named according to the following format: . YEAR-MONTH-DAY-filename.md . Where YEAR is a four-digit number, MONTH and DAY are both two-digit numbers, and filename is whatever file name you choose, to remind yourself what this post is about. .md is the file extension for markdown files. . The first line of the file should start with a single hash character, then a space, then your title. This is how you create a “level 1 heading” in markdown. Then you can create level 2, 3, etc headings as you wish but repeating the hash character, such as you see in the line ## File names above. . Basic formatting . You can use italics, bold, code font text, and create links. Here’s a footnote 1. Here’s a horizontal rule: . . Lists . Here’s a list: . item 1 | item 2 | . And a numbered list: . item 1 | item 2 | Boxes and stuff . This is a quotation . . You can include alert boxes …and… . . You can include info boxes Images . . Code . You can format text and code per usual . General preformatted text: . # Do a thing do_thing() . Python code and output: . # Prints &#39;2&#39; print(1+1) . 2 . Formatting text as shell commands: . echo &quot;hello world&quot; ./some_script.sh --option &quot;value&quot; wget https://example.com/cat_photo1.png . Formatting text as YAML: . key: value - another_key: &quot;another value&quot; . Tables . Column 1 Column 2 . A thing | Another thing | . Tweetcards . Altair 4.0 is released! https://t.co/PCyrIOTcvvTry it with: pip install -U altairThe full list of changes is at https://t.co/roXmzcsT58 ...read on for some highlights. pic.twitter.com/vWJ0ZveKbZ . &mdash; Jake VanderPlas (@jakevdp) December 11, 2019 Footnotes . This is the footnote. &#8617; . |",
             "url": "https://sohojai.github.io/covid19/markdown/2020/01/14/test-markdown-post.html",
