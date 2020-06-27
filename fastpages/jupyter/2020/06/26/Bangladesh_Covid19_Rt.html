@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>বাংলাদেশে করোনা ভাইরাস সংক্রমণের পরিসংখ্যান | Tracking COVID-19 in Bangladesh</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="বাংলাদেশে করোনা ভাইরাস সংক্রমণের পরিসংখ্যান" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Understand how COVID-19 is spreading in Bangladesh." />
+<meta property="og:description" content="Understand how COVID-19 is spreading in Bangladesh." />
+<link rel="canonical" href="https://sohojai.github.io/covid19/fastpages/jupyter/2020/06/26/Bangladesh_Covid19_Rt.html" />
+<meta property="og:url" content="https://sohojai.github.io/covid19/fastpages/jupyter/2020/06/26/Bangladesh_Covid19_Rt.html" />
+<meta property="og:site_name" content="Tracking COVID-19 in Bangladesh" />
+<meta property="og:image" content="https://sohojai.github.io/covid19/images/bangladesh-rt.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-26T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"Understand how COVID-19 is spreading in Bangladesh.","dateModified":"2020-06-26T00:00:00-05:00","datePublished":"2020-06-26T00:00:00-05:00","headline":"বাংলাদেশে করোনা ভাইরাস সংক্রমণের পরিসংখ্যান","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://sohojai.github.io/covid19/fastpages/jupyter/2020/06/26/Bangladesh_Covid19_Rt.html"},"image":"https://sohojai.github.io/covid19/images/bangladesh-rt.png","url":"https://sohojai.github.io/covid19/fastpages/jupyter/2020/06/26/Bangladesh_Covid19_Rt.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/covid19/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sohojai.github.io/covid19/feed.xml" title="Tracking COVID-19 in Bangladesh" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-167440187-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="/covid19/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>বাংলাদেশে করোনা ভাইরাস সংক্রমণের পরিসংখ্যান | Tracking COVID-19 in Bangladesh</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="বাংলাদেশে করোনা ভাইরাস সংক্রমণের পরিসংখ্যান" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Understand how COVID-19 is spreading in Bangladesh." />
+<meta property="og:description" content="Understand how COVID-19 is spreading in Bangladesh." />
+<link rel="canonical" href="https://sohojai.github.io/covid19/fastpages/jupyter/2020/06/26/Bangladesh_Covid19_Rt.html" />
+<meta property="og:url" content="https://sohojai.github.io/covid19/fastpages/jupyter/2020/06/26/Bangladesh_Covid19_Rt.html" />
+<meta property="og:site_name" content="Tracking COVID-19 in Bangladesh" />
+<meta property="og:image" content="https://sohojai.github.io/covid19/images/bangladesh-rt.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-26T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"Understand how COVID-19 is spreading in Bangladesh.","dateModified":"2020-06-26T00:00:00-05:00","datePublished":"2020-06-26T00:00:00-05:00","headline":"বাংলাদেশে করোনা ভাইরাস সংক্রমণের পরিসংখ্যান","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://sohojai.github.io/covid19/fastpages/jupyter/2020/06/26/Bangladesh_Covid19_Rt.html"},"image":"https://sohojai.github.io/covid19/images/bangladesh-rt.png","url":"https://sohojai.github.io/covid19/fastpages/jupyter/2020/06/26/Bangladesh_Covid19_Rt.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://sohojai.github.io/covid19/feed.xml" title="Tracking COVID-19 in Bangladesh" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-167440187-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/covid19/">Tracking COVID-19 in Bangladesh</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/covid19/about/">About Me</a><a class="page-link" href="/covid19/search/">Search</a><a class="page-link" href="/covid19/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">বাংলাদেশে করোনা ভাইরাস সংক্রমণের পরিসংখ্যান</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-06-26T00:00:00-05:00" itemprop="datePublished">
+        Jun 26, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/covid19/categories/#fastpages">fastpages</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/covid19/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/sohojai/covid19/tree/master/_notebooks/Bangladesh_Covid19_Rt.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/covid19/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/sohojai/covid19/master?filepath=_notebooks%2FBangladesh_Covid19_Rt.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/covid19/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/sohojai/covid19/blob/master/_notebooks/Bangladesh_Covid19_Rt.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/covid19/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/Bangladesh_Covid19_Rt.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#2470;&#2504;&#2472;&#2495;&#2453;-&#2453;&#2480;&#2507;&#2472;&#2494;-&#2438;&#2453;&#2509;&#2480;&#2494;&#2472;&#2509;&#2468;&#2503;&#2480;-&#2488;&#2434;&#2454;&#2509;&#2479;&#2494;">&#2470;&#2504;&#2472;&#2495;&#2453; &#2453;&#2480;&#2507;&#2472;&#2494; &#2438;&#2453;&#2509;&#2480;&#2494;&#2472;&#2509;&#2468;&#2503;&#2480; &#2488;&#2434;&#2454;&#2509;&#2479;&#2494;<a class="anchor-link" href="#&#2470;&#2504;&#2472;&#2495;&#2453;-&#2453;&#2480;&#2507;&#2472;&#2494;-&#2438;&#2453;&#2509;&#2480;&#2494;&#2472;&#2509;&#2468;&#2503;&#2480;-&#2488;&#2434;&#2454;&#2509;&#2479;&#2494;"> </a></h2><p><a href="https://github.com/datasets/covid-19">ডেটা</a></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+<div id="altair-viz-9b320dd90b83470a99e286dee9d3086c"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-9b320dd90b83470a99e286dee9d3086c") {
+      outputDiv = document.getElementById("altair-viz-9b320dd90b83470a99e286dee9d3086c");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "hconcat": [{"mark": "line", "encoding": {"color": {"type": "nominal", "field": "Type", "legend": null, "scale": {"scheme": "tableau20"}}, "tooltip": [{"type": "ordinal", "field": "Date", "timeUnit": "monthdate"}, {"type": "quantitative", "field": "confirmed_cases"}], "x": {"type": "ordinal", "axis": {"title": "Date"}, "field": "Date", "timeUnit": "monthdate"}, "y": {"type": "quantitative", "axis": {"title": "Confirmed cases"}, "field": "confirmed_cases"}}, "height": 300, "title": "Bangladesh New Cases per Day", "width": 600}, {"mark": "point", "encoding": {"color": {"type": "nominal", "field": "Type", "legend": null, "scale": {"scheme": "tableau20"}}, "y": {"type": "nominal", "axis": {"orient": "right"}, "field": "Type"}}}], "data": {"name": "data-92615940517d5ca4de78be279c234c98"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-92615940517d5ca4de78be279c234c98": [{"Date": "2020-04-06T00:00:00", "confirmed_cases": 35.0, "Type": "actual"}, {"Date": "2020-04-07T00:00:00", "confirmed_cases": 41.0, "Type": "actual"}, {"Date": "2020-04-08T00:00:00", "confirmed_cases": 54.0, "Type": "actual"}, {"Date": "2020-04-09T00:00:00", "confirmed_cases": 112.0, "Type": "actual"}, {"Date": "2020-04-10T00:00:00", "confirmed_cases": 94.0, "Type": "actual"}, {"Date": "2020-04-11T00:00:00", "confirmed_cases": 58.0, "Type": "actual"}, {"Date": "2020-04-12T00:00:00", "confirmed_cases": 139.0, "Type": "actual"}, {"Date": "2020-04-13T00:00:00", "confirmed_cases": 182.0, "Type": "actual"}, {"Date": "2020-04-14T00:00:00", "confirmed_cases": 209.0, "Type": "actual"}, {"Date": "2020-04-15T00:00:00", "confirmed_cases": 219.0, "Type": "actual"}, {"Date": "2020-04-16T00:00:00", "confirmed_cases": 341.0, "Type": "actual"}, {"Date": "2020-04-17T00:00:00", "confirmed_cases": 266.0, "Type": "actual"}, {"Date": "2020-04-18T00:00:00", "confirmed_cases": 306.0, "Type": "actual"}, {"Date": "2020-04-19T00:00:00", "confirmed_cases": 312.0, "Type": "actual"}, {"Date": "2020-04-20T00:00:00", "confirmed_cases": 492.0, "Type": "actual"}, {"Date": "2020-04-21T00:00:00", "confirmed_cases": 434.0, "Type": "actual"}, {"Date": "2020-04-22T00:00:00", "confirmed_cases": 390.0, "Type": "actual"}, {"Date": "2020-04-23T00:00:00", "confirmed_cases": 414.0, "Type": "actual"}, {"Date": "2020-04-24T00:00:00", "confirmed_cases": 503.0, "Type": "actual"}, {"Date": "2020-04-25T00:00:00", "confirmed_cases": 309.0, "Type": "actual"}, {"Date": "2020-04-26T00:00:00", "confirmed_cases": 418.0, "Type": "actual"}, {"Date": "2020-04-27T00:00:00", "confirmed_cases": 497.0, "Type": "actual"}, {"Date": "2020-04-28T00:00:00", "confirmed_cases": 549.0, "Type": "actual"}, {"Date": "2020-04-29T00:00:00", "confirmed_cases": 641.0, "Type": "actual"}, {"Date": "2020-04-30T00:00:00", "confirmed_cases": 564.0, "Type": "actual"}, {"Date": "2020-05-01T00:00:00", "confirmed_cases": 571.0, "Type": "actual"}, {"Date": "2020-05-02T00:00:00", "confirmed_cases": 552.0, "Type": "actual"}, {"Date": "2020-05-03T00:00:00", "confirmed_cases": 665.0, "Type": "actual"}, {"Date": "2020-05-04T00:00:00", "confirmed_cases": 688.0, "Type": "actual"}, {"Date": "2020-05-05T00:00:00", "confirmed_cases": 786.0, "Type": "actual"}, {"Date": "2020-05-06T00:00:00", "confirmed_cases": 790.0, "Type": "actual"}, {"Date": "2020-05-07T00:00:00", "confirmed_cases": 706.0, "Type": "actual"}, {"Date": "2020-05-08T00:00:00", "confirmed_cases": 709.0, "Type": "actual"}, {"Date": "2020-05-09T00:00:00", "confirmed_cases": 636.0, "Type": "actual"}, {"Date": "2020-05-10T00:00:00", "confirmed_cases": 887.0, "Type": "actual"}, {"Date": "2020-05-11T00:00:00", "confirmed_cases": 1034.0, "Type": "actual"}, {"Date": "2020-05-12T00:00:00", "confirmed_cases": 969.0, "Type": "actual"}, {"Date": "2020-05-13T00:00:00", "confirmed_cases": 1162.0, "Type": "actual"}, {"Date": "2020-05-14T00:00:00", "confirmed_cases": 1041.0, "Type": "actual"}, {"Date": "2020-05-15T00:00:00", "confirmed_cases": 1202.0, "Type": "actual"}, {"Date": "2020-05-16T00:00:00", "confirmed_cases": 930.0, "Type": "actual"}, {"Date": "2020-05-17T00:00:00", "confirmed_cases": 1273.0, "Type": "actual"}, {"Date": "2020-05-18T00:00:00", "confirmed_cases": 1602.0, "Type": "actual"}, {"Date": "2020-05-19T00:00:00", "confirmed_cases": 1251.0, "Type": "actual"}, {"Date": "2020-05-20T00:00:00", "confirmed_cases": 1617.0, "Type": "actual"}, {"Date": "2020-05-21T00:00:00", "confirmed_cases": 1773.0, "Type": "actual"}, {"Date": "2020-05-22T00:00:00", "confirmed_cases": 1694.0, "Type": "actual"}, {"Date": "2020-05-23T00:00:00", "confirmed_cases": 1873.0, "Type": "actual"}, {"Date": "2020-05-24T00:00:00", "confirmed_cases": 1532.0, "Type": "actual"}, {"Date": "2020-05-25T00:00:00", "confirmed_cases": 1975.0, "Type": "actual"}, {"Date": "2020-05-26T00:00:00", "confirmed_cases": 1166.0, "Type": "actual"}, {"Date": "2020-05-27T00:00:00", "confirmed_cases": 1541.0, "Type": "actual"}, {"Date": "2020-05-28T00:00:00", "confirmed_cases": 2029.0, "Type": "actual"}, {"Date": "2020-05-29T00:00:00", "confirmed_cases": 2523.0, "Type": "actual"}, {"Date": "2020-05-30T00:00:00", "confirmed_cases": 1764.0, "Type": "actual"}, {"Date": "2020-05-31T00:00:00", "confirmed_cases": 2545.0, "Type": "actual"}, {"Date": "2020-06-01T00:00:00", "confirmed_cases": 2381.0, "Type": "actual"}, {"Date": "2020-06-02T00:00:00", "confirmed_cases": 2911.0, "Type": "actual"}, {"Date": "2020-06-03T00:00:00", "confirmed_cases": 2695.0, "Type": "actual"}, {"Date": "2020-06-04T00:00:00", "confirmed_cases": 2423.0, "Type": "actual"}, {"Date": "2020-06-05T00:00:00", "confirmed_cases": 2828.0, "Type": "actual"}, {"Date": "2020-06-06T00:00:00", "confirmed_cases": 2635.0, "Type": "actual"}, {"Date": "2020-06-07T00:00:00", "confirmed_cases": 2743.0, "Type": "actual"}, {"Date": "2020-06-08T00:00:00", "confirmed_cases": 2735.0, "Type": "actual"}, {"Date": "2020-06-09T00:00:00", "confirmed_cases": 3171.0, "Type": "actual"}, {"Date": "2020-06-10T00:00:00", "confirmed_cases": 3190.0, "Type": "actual"}, {"Date": "2020-06-11T00:00:00", "confirmed_cases": 3187.0, "Type": "actual"}, {"Date": "2020-06-12T00:00:00", "confirmed_cases": 3471.0, "Type": "actual"}, {"Date": "2020-06-13T00:00:00", "confirmed_cases": 2856.0, "Type": "actual"}, {"Date": "2020-06-14T00:00:00", "confirmed_cases": 3141.0, "Type": "actual"}, {"Date": "2020-06-15T00:00:00", "confirmed_cases": 3099.0, "Type": "actual"}, {"Date": "2020-06-16T00:00:00", "confirmed_cases": 3862.0, "Type": "actual"}, {"Date": "2020-06-17T00:00:00", "confirmed_cases": 4008.0, "Type": "actual"}, {"Date": "2020-06-18T00:00:00", "confirmed_cases": 3803.0, "Type": "actual"}, {"Date": "2020-06-19T00:00:00", "confirmed_cases": 3243.0, "Type": "actual"}, {"Date": "2020-06-20T00:00:00", "confirmed_cases": 3240.0, "Type": "actual"}, {"Date": "2020-06-21T00:00:00", "confirmed_cases": 3531.0, "Type": "actual"}, {"Date": "2020-06-22T00:00:00", "confirmed_cases": 3480.0, "Type": "actual"}, {"Date": "2020-06-23T00:00:00", "confirmed_cases": 3412.0, "Type": "actual"}, {"Date": "2020-06-24T00:00:00", "confirmed_cases": 3462.0, "Type": "actual"}, {"Date": "2020-06-25T00:00:00", "confirmed_cases": 3946.0, "Type": "actual"}, {"Date": "2020-06-26T00:00:00", "confirmed_cases": 3868.0, "Type": "actual"}, {"Date": "2020-04-06T00:00:00", "confirmed_cases": 35.0, "Type": "smoothed"}, {"Date": "2020-04-07T00:00:00", "confirmed_cases": 50.0, "Type": "smoothed"}, {"Date": "2020-04-08T00:00:00", "confirmed_cases": 63.0, "Type": "smoothed"}, {"Date": "2020-04-09T00:00:00", "confirmed_cases": 78.0, "Type": "smoothed"}, {"Date": "2020-04-10T00:00:00", "confirmed_cases": 94.0, "Type": "smoothed"}, {"Date": "2020-04-11T00:00:00", "confirmed_cases": 114.0, "Type": "smoothed"}, {"Date": "2020-04-12T00:00:00", "confirmed_cases": 139.0, "Type": "smoothed"}, {"Date": "2020-04-13T00:00:00", "confirmed_cases": 173.0, "Type": "smoothed"}, {"Date": "2020-04-14T00:00:00", "confirmed_cases": 207.0, "Type": "smoothed"}, {"Date": "2020-04-15T00:00:00", "confirmed_cases": 242.0, "Type": "smoothed"}, {"Date": "2020-04-16T00:00:00", "confirmed_cases": 268.0, "Type": "smoothed"}, {"Date": "2020-04-17T00:00:00", "confirmed_cases": 300.0, "Type": "smoothed"}, {"Date": "2020-04-18T00:00:00", "confirmed_cases": 331.0, "Type": "smoothed"}, {"Date": "2020-04-19T00:00:00", "confirmed_cases": 363.0, "Type": "smoothed"}, {"Date": "2020-04-20T00:00:00", "confirmed_cases": 388.0, "Type": "smoothed"}, {"Date": "2020-04-21T00:00:00", "confirmed_cases": 414.0, "Type": "smoothed"}, {"Date": "2020-04-22T00:00:00", "confirmed_cases": 420.0, "Type": "smoothed"}, {"Date": "2020-04-23T00:00:00", "confirmed_cases": 421.0, "Type": "smoothed"}, {"Date": "2020-04-24T00:00:00", "confirmed_cases": 418.0, "Type": "smoothed"}, {"Date": "2020-04-25T00:00:00", "confirmed_cases": 428.0, "Type": "smoothed"}, {"Date": "2020-04-26T00:00:00", "confirmed_cases": 456.0, "Type": "smoothed"}, {"Date": "2020-04-27T00:00:00", "confirmed_cases": 491.0, "Type": "smoothed"}, {"Date": "2020-04-28T00:00:00", "confirmed_cases": 526.0, "Type": "smoothed"}, {"Date": "2020-04-29T00:00:00", "confirmed_cases": 559.0, "Type": "smoothed"}, {"Date": "2020-04-30T00:00:00", "confirmed_cases": 579.0, "Type": "smoothed"}, {"Date": "2020-05-01T00:00:00", "confirmed_cases": 594.0, "Type": "smoothed"}, {"Date": "2020-05-02T00:00:00", "confirmed_cases": 619.0, "Type": "smoothed"}, {"Date": "2020-05-03T00:00:00", "confirmed_cases": 653.0, "Type": "smoothed"}, {"Date": "2020-05-04T00:00:00", "confirmed_cases": 691.0, "Type": "smoothed"}, {"Date": "2020-05-05T00:00:00", "confirmed_cases": 720.0, "Type": "smoothed"}, {"Date": "2020-05-06T00:00:00", "confirmed_cases": 730.0, "Type": "smoothed"}, {"Date": "2020-05-07T00:00:00", "confirmed_cases": 735.0, "Type": "smoothed"}, {"Date": "2020-05-08T00:00:00", "confirmed_cases": 757.0, "Type": "smoothed"}, {"Date": "2020-05-09T00:00:00", "confirmed_cases": 793.0, "Type": "smoothed"}, {"Date": "2020-05-10T00:00:00", "confirmed_cases": 861.0, "Type": "smoothed"}, {"Date": "2020-05-11T00:00:00", "confirmed_cases": 936.0, "Type": "smoothed"}, {"Date": "2020-05-12T00:00:00", "confirmed_cases": 1010.0, "Type": "smoothed"}, {"Date": "2020-05-13T00:00:00", "confirmed_cases": 1055.0, "Type": "smoothed"}, {"Date": "2020-05-14T00:00:00", "confirmed_cases": 1087.0, "Type": "smoothed"}, {"Date": "2020-05-15T00:00:00", "confirmed_cases": 1135.0, "Type": "smoothed"}, {"Date": "2020-05-16T00:00:00", "confirmed_cases": 1189.0, "Type": "smoothed"}, {"Date": "2020-05-17T00:00:00", "confirmed_cases": 1266.0, "Type": "smoothed"}, {"Date": "2020-05-18T00:00:00", "confirmed_cases": 1370.0, "Type": "smoothed"}, {"Date": "2020-05-19T00:00:00", "confirmed_cases": 1468.0, "Type": "smoothed"}, {"Date": "2020-05-20T00:00:00", "confirmed_cases": 1579.0, "Type": "smoothed"}, {"Date": "2020-05-21T00:00:00", "confirmed_cases": 1644.0, "Type": "smoothed"}, {"Date": "2020-05-22T00:00:00", "confirmed_cases": 1701.0, "Type": "smoothed"}, {"Date": "2020-05-23T00:00:00", "confirmed_cases": 1707.0, "Type": "smoothed"}, {"Date": "2020-05-24T00:00:00", "confirmed_cases": 1672.0, "Type": "smoothed"}, {"Date": "2020-05-25T00:00:00", "confirmed_cases": 1650.0, "Type": "smoothed"}, {"Date": "2020-05-26T00:00:00", "confirmed_cases": 1698.0, "Type": "smoothed"}, {"Date": "2020-05-27T00:00:00", "confirmed_cases": 1763.0, "Type": "smoothed"}, {"Date": "2020-05-28T00:00:00", "confirmed_cases": 1915.0, "Type": "smoothed"}, {"Date": "2020-05-29T00:00:00", "confirmed_cases": 2053.0, "Type": "smoothed"}, {"Date": "2020-05-30T00:00:00", "confirmed_cases": 2238.0, "Type": "smoothed"}, {"Date": "2020-05-31T00:00:00", "confirmed_cases": 2384.0, "Type": "smoothed"}, {"Date": "2020-06-01T00:00:00", "confirmed_cases": 2487.0, "Type": "smoothed"}, {"Date": "2020-06-02T00:00:00", "confirmed_cases": 2570.0, "Type": "smoothed"}, {"Date": "2020-06-03T00:00:00", "confirmed_cases": 2646.0, "Type": "smoothed"}, {"Date": "2020-06-04T00:00:00", "confirmed_cases": 2663.0, "Type": "smoothed"}, {"Date": "2020-06-05T00:00:00", "confirmed_cases": 2685.0, "Type": "smoothed"}, {"Date": "2020-06-06T00:00:00", "confirmed_cases": 2720.0, "Type": "smoothed"}, {"Date": "2020-06-07T00:00:00", "confirmed_cases": 2797.0, "Type": "smoothed"}, {"Date": "2020-06-08T00:00:00", "confirmed_cases": 2904.0, "Type": "smoothed"}, {"Date": "2020-06-09T00:00:00", "confirmed_cases": 3021.0, "Type": "smoothed"}, {"Date": "2020-06-10T00:00:00", "confirmed_cases": 3108.0, "Type": "smoothed"}, {"Date": "2020-06-11T00:00:00", "confirmed_cases": 3161.0, "Type": "smoothed"}, {"Date": "2020-06-12T00:00:00", "confirmed_cases": 3172.0, "Type": "smoothed"}, {"Date": "2020-06-13T00:00:00", "confirmed_cases": 3197.0, "Type": "smoothed"}, {"Date": "2020-06-14T00:00:00", "confirmed_cases": 3280.0, "Type": "smoothed"}, {"Date": "2020-06-15T00:00:00", "confirmed_cases": 3415.0, "Type": "smoothed"}, {"Date": "2020-06-16T00:00:00", "confirmed_cases": 3528.0, "Type": "smoothed"}, {"Date": "2020-06-17T00:00:00", "confirmed_cases": 3607.0, "Type": "smoothed"}, {"Date": "2020-06-18T00:00:00", "confirmed_cases": 3601.0, "Type": "smoothed"}, {"Date": "2020-06-19T00:00:00", "confirmed_cases": 3547.0, "Type": "smoothed"}, {"Date": "2020-06-20T00:00:00", "confirmed_cases": 3467.0, "Type": "smoothed"}, {"Date": "2020-06-21T00:00:00", "confirmed_cases": 3427.0, "Type": "smoothed"}, {"Date": "2020-06-22T00:00:00", "confirmed_cases": 3459.0, "Type": "smoothed"}, {"Date": "2020-06-23T00:00:00", "confirmed_cases": 3540.0, "Type": "smoothed"}, {"Date": "2020-06-24T00:00:00", "confirmed_cases": 3616.0, "Type": "smoothed"}, {"Date": "2020-06-25T00:00:00", "confirmed_cases": 3683.0, "Type": "smoothed"}, {"Date": "2020-06-26T00:00:00", "confirmed_cases": 3752.0, "Type": "smoothed"}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="R-&#2488;&#2434;&#2454;&#2509;&#2479;&#2494;">R &#2488;&#2434;&#2454;&#2509;&#2479;&#2494;<a class="anchor-link" href="#R-&#2488;&#2434;&#2454;&#2509;&#2479;&#2494;"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>R সংখ্যাটি কোনও রোগের ছড়িয়ে যাওয়ার ক্ষমতাকে রেটিং দেওয়ার উপায়। একজন সংক্রামিত ব্যক্তি থেকে গড়ে এই ভাইরাসটি কতো লোকে সংক্রামিত হবে এই সংখ্যা সেটা বলে। সময়ের সাথে সাথে পরিবর্তিত হয় বলে এটাকে Rt ও বলা হয়। নতুন করোনাভাইরাস, কোভিড-১৯, এর R সংখ্যা প্রায় ৩। মিসেল্স বা হাম এর R প্রায় ১৫ যেটা সর্বাধিক। <a href="https://www.bbc.com/news/health-52473523">সূত্রঃ বিবিসি</a></p>
+<p><a href="https://colab.research.google.com/github/sohojai/covid19/blob/master/_notebooks/Bangladesh_Covid19_Rt.ipynb">কোল্যাব নোটবুক</a><br />
+<a href="https://github.com/k-sys/covid-19">মূল কোড</a></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+<div id="altair-viz-297ccb0d127d40fe81f7bd86f184a4b7"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-297ccb0d127d40fe81f7bd86f184a4b7") {
+      outputDiv = document.getElementById("altair-viz-297ccb0d127d40fe81f7bd86f184a4b7");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "layer": [{"mark": {"type": "area", "opacity": 0.4}, "encoding": {"x": {"type": "ordinal", "axis": {"title": "Date"}, "field": "ds", "timeUnit": "monthdate"}, "y": {"type": "quantitative", "field": "High_90", "scale": {"clamp": true, "domain": [0, 5]}}, "y2": {"field": "Low_90"}}, "width": 600}, {"mark": {"type": "line", "filled": false}, "encoding": {"tooltip": [{"type": "ordinal", "field": "ds", "timeUnit": "monthdate"}, {"type": "quantitative", "field": "ML"}], "x": {"type": "ordinal", "axis": {"title": "Date"}, "field": "ds", "timeUnit": "monthdate"}, "y": {"type": "quantitative", "axis": {"title": "COVID-19 Rt in Bangladesh"}, "field": "ML", "scale": {"clamp": true, "domain": [0, 5]}}}, "title": "COVID-19 effective reproduction rate (Rt) in Bangladesh", "width": 600}, {"mark": {"type": "point", "color": "black", "filled": true}, "encoding": {"tooltip": [{"type": "ordinal", "field": "ds", "timeUnit": "monthdate"}, {"type": "quantitative", "field": "ML"}], "x": {"type": "ordinal", "axis": {"title": "Date"}, "field": "ds", "timeUnit": "monthdate"}, "y": {"type": "quantitative", "field": "ML", "scale": {"clamp": true, "domain": [0, 5]}}}, "width": 600}], "data": {"name": "data-6d0a7ab81cf615f15884865e4d1e43f2"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-6d0a7ab81cf615f15884865e4d1e43f2": [{"ML": 0.0, "Low_90": 0.0, "High_90": 10.81, "ds": "2020-04-06T00:00:00"}, {"ML": 3.5, "Low_90": 1.73, "High_90": 5.0, "ds": "2020-04-07T00:00:00"}, {"ML": 2.99, "Low_90": 1.82, "High_90": 4.0, "ds": "2020-04-08T00:00:00"}, {"ML": 2.7800000000000002, "Low_90": 1.92, "High_90": 3.6, "ds": "2020-04-09T00:00:00"}, {"ML": 2.61, "Low_90": 1.8800000000000001, "High_90": 3.27, "ds": "2020-04-10T00:00:00"}, {"ML": 2.5300000000000002, "Low_90": 1.9100000000000001, "High_90": 3.1, "ds": "2020-04-11T00:00:00"}, {"ML": 2.49, "Low_90": 1.92, "High_90": 2.97, "ds": "2020-04-12T00:00:00"}, {"ML": 2.5, "Low_90": 2.0100000000000002, "High_90": 2.94, "ds": "2020-04-13T00:00:00"}, {"ML": 2.43, "Low_90": 1.99, "High_90": 2.83, "ds": "2020-04-14T00:00:00"}, {"ML": 2.34, "Low_90": 1.93, "High_90": 2.7, "ds": "2020-04-15T00:00:00"}, {"ML": 2.17, "Low_90": 1.78, "High_90": 2.5, "ds": "2020-04-16T00:00:00"}, {"ML": 2.07, "Low_90": 1.7, "High_90": 2.38, "ds": "2020-04-17T00:00:00"}, {"ML": 1.97, "Low_90": 1.62, "High_90": 2.27, "ds": "2020-04-18T00:00:00"}, {"ML": 1.8800000000000001, "Low_90": 1.56, "High_90": 2.18, "ds": "2020-04-19T00:00:00"}, {"ML": 1.77, "Low_90": 1.46, "High_90": 2.06, "ds": "2020-04-20T00:00:00"}, {"ML": 1.68, "Low_90": 1.36, "High_90": 1.95, "ds": "2020-04-21T00:00:00"}, {"ML": 1.53, "Low_90": 1.21, "High_90": 1.79, "ds": "2020-04-22T00:00:00"}, {"ML": 1.3900000000000001, "Low_90": 1.09, "High_90": 1.6600000000000001, "ds": "2020-04-23T00:00:00"}, {"ML": 1.28, "Low_90": 0.97, "High_90": 1.54, "ds": "2020-04-24T00:00:00"}, {"ML": 1.25, "Low_90": 0.9400000000000001, "High_90": 1.51, "ds": "2020-04-25T00:00:00"}, {"ML": 1.3, "Low_90": 1.01, "High_90": 1.57, "ds": "2020-04-26T00:00:00"}, {"ML": 1.36, "Low_90": 1.05, "High_90": 1.61, "ds": "2020-04-27T00:00:00"}, {"ML": 1.4000000000000001, "Low_90": 1.09, "High_90": 1.6400000000000001, "ds": "2020-04-28T00:00:00"}, {"ML": 1.4000000000000001, "Low_90": 1.1, "High_90": 1.6400000000000001, "ds": "2020-04-29T00:00:00"}, {"ML": 1.36, "Low_90": 1.06, "High_90": 1.59, "ds": "2020-04-30T00:00:00"}, {"ML": 1.3, "Low_90": 1.02, "High_90": 1.54, "ds": "2020-05-01T00:00:00"}, {"ML": 1.3, "Low_90": 1.01, "High_90": 1.53, "ds": "2020-05-02T00:00:00"}, {"ML": 1.32, "Low_90": 1.04, "High_90": 1.55, "ds": "2020-05-03T00:00:00"}, {"ML": 1.35, "Low_90": 1.08, "High_90": 1.58, "ds": "2020-05-04T00:00:00"}, {"ML": 1.33, "Low_90": 1.07, "High_90": 1.56, "ds": "2020-05-05T00:00:00"}, {"ML": 1.25, "Low_90": 0.98, "High_90": 1.47, "ds": "2020-05-06T00:00:00"}, {"ML": 1.19, "Low_90": 0.91, "High_90": 1.4000000000000001, "ds": "2020-05-07T00:00:00"}, {"ML": 1.19, "Low_90": 0.9400000000000001, "High_90": 1.42, "ds": "2020-05-08T00:00:00"}, {"ML": 1.24, "Low_90": 0.97, "High_90": 1.45, "ds": "2020-05-09T00:00:00"}, {"ML": 1.35, "Low_90": 1.1, "High_90": 1.57, "ds": "2020-05-10T00:00:00"}, {"ML": 1.44, "Low_90": 1.19, "High_90": 1.6500000000000001, "ds": "2020-05-11T00:00:00"}, {"ML": 1.47, "Low_90": 1.23, "High_90": 1.68, "ds": "2020-05-12T00:00:00"}, {"ML": 1.41, "Low_90": 1.17, "High_90": 1.61, "ds": "2020-05-13T00:00:00"}, {"ML": 1.33, "Low_90": 1.11, "High_90": 1.54, "ds": "2020-05-14T00:00:00"}, {"ML": 1.32, "Low_90": 1.08, "High_90": 1.51, "ds": "2020-05-15T00:00:00"}, {"ML": 1.32, "Low_90": 1.1, "High_90": 1.52, "ds": "2020-05-16T00:00:00"}, {"ML": 1.37, "Low_90": 1.1300000000000001, "High_90": 1.55, "ds": "2020-05-17T00:00:00"}, {"ML": 1.45, "Low_90": 1.22, "High_90": 1.6300000000000001, "ds": "2020-05-18T00:00:00"}, {"ML": 1.46, "Low_90": 1.24, "High_90": 1.6400000000000001, "ds": "2020-05-19T00:00:00"}, {"ML": 1.48, "Low_90": 1.27, "High_90": 1.6600000000000001, "ds": "2020-05-20T00:00:00"}, {"ML": 1.3900000000000001, "Low_90": 1.19, "High_90": 1.57, "ds": "2020-05-21T00:00:00"}, {"ML": 1.32, "Low_90": 1.11, "High_90": 1.49, "ds": "2020-05-22T00:00:00"}, {"ML": 1.19, "Low_90": 1.0, "High_90": 1.37, "ds": "2020-05-23T00:00:00"}, {"ML": 1.04, "Low_90": 0.85, "High_90": 1.22, "ds": "2020-05-24T00:00:00"}, {"ML": 0.98, "Low_90": 0.77, "High_90": 1.1500000000000001, "ds": "2020-05-25T00:00:00"}, {"ML": 1.08, "Low_90": 0.87, "High_90": 1.25, "ds": "2020-05-26T00:00:00"}, {"ML": 1.16, "Low_90": 0.97, "High_90": 1.34, "ds": "2020-05-27T00:00:00"}, {"ML": 1.36, "Low_90": 1.1500000000000001, "High_90": 1.52, "ds": "2020-05-28T00:00:00"}, {"ML": 1.42, "Low_90": 1.22, "High_90": 1.58, "ds": "2020-05-29T00:00:00"}, {"ML": 1.51, "Low_90": 1.31, "High_90": 1.6600000000000001, "ds": "2020-05-30T00:00:00"}, {"ML": 1.48, "Low_90": 1.29, "High_90": 1.6300000000000001, "ds": "2020-05-31T00:00:00"}, {"ML": 1.3800000000000001, "Low_90": 1.21, "High_90": 1.54, "ds": "2020-06-01T00:00:00"}, {"ML": 1.3, "Low_90": 1.12, "High_90": 1.45, "ds": "2020-06-02T00:00:00"}, {"ML": 1.25, "Low_90": 1.06, "High_90": 1.3900000000000001, "ds": "2020-06-03T00:00:00"}, {"ML": 1.1500000000000001, "Low_90": 0.98, "High_90": 1.3, "ds": "2020-06-04T00:00:00"}, {"ML": 1.1, "Low_90": 0.93, "High_90": 1.25, "ds": "2020-06-05T00:00:00"}, {"ML": 1.09, "Low_90": 0.92, "High_90": 1.24, "ds": "2020-06-06T00:00:00"}, {"ML": 1.1500000000000001, "Low_90": 0.97, "High_90": 1.29, "ds": "2020-06-07T00:00:00"}, {"ML": 1.21, "Low_90": 1.03, "High_90": 1.35, "ds": "2020-06-08T00:00:00"}, {"ML": 1.25, "Low_90": 1.08, "High_90": 1.3900000000000001, "ds": "2020-06-09T00:00:00"}, {"ML": 1.22, "Low_90": 1.05, "High_90": 1.36, "ds": "2020-06-10T00:00:00"}, {"ML": 1.16, "Low_90": 0.99, "High_90": 1.3, "ds": "2020-06-11T00:00:00"}, {"ML": 1.09, "Low_90": 0.91, "High_90": 1.22, "ds": "2020-06-12T00:00:00"}, {"ML": 1.07, "Low_90": 0.89, "High_90": 1.2, "ds": "2020-06-13T00:00:00"}, {"ML": 1.1300000000000001, "Low_90": 0.97, "High_90": 1.27, "ds": "2020-06-14T00:00:00"}, {"ML": 1.22, "Low_90": 1.05, "High_90": 1.35, "ds": "2020-06-15T00:00:00"}, {"ML": 1.22, "Low_90": 1.05, "High_90": 1.35, "ds": "2020-06-16T00:00:00"}, {"ML": 1.18, "Low_90": 1.03, "High_90": 1.32, "ds": "2020-06-17T00:00:00"}, {"ML": 1.07, "Low_90": 0.92, "High_90": 1.21, "ds": "2020-06-18T00:00:00"}, {"ML": 0.97, "Low_90": 0.8200000000000001, "High_90": 1.11, "ds": "2020-06-19T00:00:00"}, {"ML": 0.9, "Low_90": 0.73, "High_90": 1.03, "ds": "2020-06-20T00:00:00"}, {"ML": 0.91, "Low_90": 0.74, "High_90": 1.04, "ds": "2020-06-21T00:00:00"}, {"ML": 1.0, "Low_90": 0.8300000000000001, "High_90": 1.1300000000000001, "ds": "2020-06-22T00:00:00"}, {"ML": 1.09, "Low_90": 0.92, "High_90": 1.22, "ds": "2020-06-23T00:00:00"}, {"ML": 1.12, "Low_90": 0.97, "High_90": 1.26, "ds": "2020-06-24T00:00:00"}, {"ML": 1.1300000000000001, "Low_90": 0.97, "High_90": 1.26, "ds": "2020-06-25T00:00:00"}, {"ML": 1.1300000000000001, "Low_90": 0.97, "High_90": 1.26, "ds": "2020-06-26T00:00:00"}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="sohojai/covid19"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/covid19/fastpages/jupyter/2020/06/26/Bangladesh_Covid19_Rt.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/covid19/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/covid19/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/covid19/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Understand how COVID-19 is spreading in Bangladesh.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/sohojai" title="sohojai"><svg class="svg-icon grey"><use xlink:href="/covid19/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
